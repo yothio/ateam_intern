@@ -1,0 +1,23 @@
+
+<h1>Blogs</h1>
+<%= form_for :blog, url: blogs_path do |f| %>
+<%= f.text_field :title, placeholder: "投稿しよう", :size=>"60"%>
+<%= f.submit "投稿" %>
+<% end %>
+<hr>
+<div id="blogs-container">
+  <% @blogs.each do |blog| %>
+  <div class="post-blog">
+    <p>
+      <%= blog.id %>:<%= link_to blog.title, blog_path(blog)  %><br>
+      <span class="like"><%= link_to "いいね", blog_path(blog), method: :put,  params: { title: 'top' }%>
+        :<%= blog.good %>|</span>
+      <span class="comment">コメント数 :<%= blog.comment %>|</span>
+      <span class="postTime">
+        投稿日時:<%= blog.created_at %>
+      </span>
+    </p>
+  </div>
+  <% end %>
+</div>
+<br>

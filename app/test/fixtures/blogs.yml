@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  postnum: 1
+  title: MyString
+  good: MyString
+  comment: 1
+  posttime: 2017-08-19
+
+two:
+  postnum: 1
+  title: MyString
+  good: MyString
+  comment: 1
+  posttime: 2017-08-19
